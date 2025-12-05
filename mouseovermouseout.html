@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style></style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var x;
+      x = $(document);
+      x.ready(iniciar);
+      function iniciar() {
+        var x;
+        x = $("#mouse");
+        x.mouseover(entroMouse);
+        x.mouseout(salioMouse);
+      }
+      function entroMouse() {
+        $(this).css("background-color", "yellow");
+      }
+      function salioMouse() {
+        $(this).css("background-color", "white");
+      }
+    </script>
+  </head>
+  <body>
+    <div id="mouse">Entrar y Salir</div>
+  </body>
+</html>
